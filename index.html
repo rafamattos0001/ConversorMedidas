@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Medidas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Conversor de Medidas</h1>
+        <p>Insira um valor e escolha as unidades para converter.</p>
+        
+        <div class="input-group">
+            <label for="category">Categoria:</label>
+            <select id="category" onchange="updateUnits()">
+                <option value="length">Comprimento</option>
+                <option value="weight">Peso</option>
+                <option value="temperature">Temperatura</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <input type="number" id="inputValue" placeholder="Digite o valor" step="any">
+        </div>
+
+        <div class="conversion-row">
+            <div class="input-group">
+                <label for="fromUnit">De:</label>
+                <select id="fromUnit"></select>
+            </div>
+            
+            <div class="input-group">
+                <label for="toUnit">Para:</label>
+                <select id="toUnit"></select>
+            </div>
+        </div>
+
+        <button onclick="convert()">Converter</button>
+
+        <div id="resultBox" class="hidden">
+            <h2>Resultado:</h2>
+            <p id="resultText"></p>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
